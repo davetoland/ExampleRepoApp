@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleRepoApp.Api", "ExampleRepoApp.Api\ExampleRepoApp.Api.csproj", "{21387347-F9A5-45F5-B33A-BDE1497970A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleRepoApp.BusinessLogic", "ExampleRepoApp.BusinessLogic\ExampleRepoApp.BusinessLogic.csproj", "{A47CD6EF-7AB5-4CBC-9EEC-7E962D0E1762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleRepoApp.DataLayer", "ExampleRepoApp.DataLayer\ExampleRepoApp.DataLayer.csproj", "{4C128921-9D20-4EE3-8D9A-F1987A7D6B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21387347-F9A5-45F5-B33A-BDE1497970A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21387347-F9A5-45F5-B33A-BDE1497970A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21387347-F9A5-45F5-B33A-BDE1497970A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21387347-F9A5-45F5-B33A-BDE1497970A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47CD6EF-7AB5-4CBC-9EEC-7E962D0E1762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47CD6EF-7AB5-4CBC-9EEC-7E962D0E1762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47CD6EF-7AB5-4CBC-9EEC-7E962D0E1762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47CD6EF-7AB5-4CBC-9EEC-7E962D0E1762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C128921-9D20-4EE3-8D9A-F1987A7D6B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C128921-9D20-4EE3-8D9A-F1987A7D6B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C128921-9D20-4EE3-8D9A-F1987A7D6B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C128921-9D20-4EE3-8D9A-F1987A7D6B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
