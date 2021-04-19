@@ -32,8 +32,9 @@ namespace ExampleRepoApp.Api
             services.AddSingleton<ILogger>(svc => svc.GetRequiredService<ILogger<Startup>>());
             services.AddLogging();
             
-            services.AddDbContext<ExampleRepoDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Default"), x =>
+            services.AddDbContext<ExampleRepoDbContext>(options => options
+                .UseLazyLoadingProxies()
+                .UseSqlServer(Configuration.GetConnectionString("Default"), x =>
                     x.MigrationsAssembly("ExampleRepoApp.DataLayer"))
                     #if DEBUG
                     .LogTo(x => Debug.WriteLine(x))
