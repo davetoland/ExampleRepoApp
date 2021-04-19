@@ -9,6 +9,6 @@ namespace ExampleRepoApp.BusinessLogic.Domain
         public string City { get; set; }
         public string County { get; set; }
         public string PostCode { get; set; }
-        public IEnumerable<Owner> Owners { get; }
+        public IEnumerable<Owner> Owners { get; set; }
     }
 }

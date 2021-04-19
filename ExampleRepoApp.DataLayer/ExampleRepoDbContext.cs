@@ -17,14 +17,14 @@ namespace ExampleRepoApp.DataLayer
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ExampleOwner>()
-                .HasMany(x => x.Vehicles)
-                .WithOne(x => x.Owner)
-                .HasForeignKey(x => x.OwnerId);
-
-            modelBuilder.Entity<ExampleOwner>()
                 .HasOne(x => x.Address)
                 .WithMany(x => x.Owners)
                 .HasForeignKey(x => x.AddressId);
+
+            modelBuilder.Entity<ExampleVehicle>()
+                .HasOne(x => x.Owner)
+                .WithMany(x => x.Vehicles)
+                .HasForeignKey(x => x.OwnerId);
 
             modelBuilder.Entity<ExampleVehicle>()
                 .HasOne(x => x.VehicleType)
