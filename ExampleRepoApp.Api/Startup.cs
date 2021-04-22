@@ -33,7 +33,7 @@ namespace ExampleRepoApp.Api
             services.AddLogging();
             
             services.AddDbContext<ExampleRepoDbContext>(options => options
-                .UseLazyLoadingProxies()
+                //.UseLazyLoadingProxies()
                 .UseSqlServer(Configuration.GetConnectionString("Default"), x =>
                     x.MigrationsAssembly("ExampleRepoApp.DataLayer"))
                     #if DEBUG

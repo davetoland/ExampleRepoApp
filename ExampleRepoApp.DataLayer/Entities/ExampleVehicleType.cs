@@ -6,6 +6,6 @@ namespace ExampleRepoApp.DataLayer.Entities
     {
         public string Name { get; set; }
         
-        public virtual IEnumerable<ExampleVehicle> Vehicles { get; }
+        public virtual IEnumerable<ExampleVehicle> Vehicles { get; set; }
     }
 }

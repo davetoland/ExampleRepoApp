@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ExampleRepoApp.BusinessLogic.Domain
 {
@@ -9,7 +8,5 @@ namespace ExampleRepoApp.BusinessLogic.Domain
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public OwnerAddress Address { get; set; }
-        public IEnumerable<Vehicle> Vehicles { get; set; }
     }
 }

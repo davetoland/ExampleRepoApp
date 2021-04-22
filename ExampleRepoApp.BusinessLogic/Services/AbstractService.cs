@@ -23,11 +23,8 @@ namespace ExampleRepoApp.BusinessLogic.Services
             Mapper = mapper;
         }
 
-        public async Task<TDto> GetById(long id)
+        public virtual async Task<TDto> GetById(long id, string[] expandedMembers)
         {
-            // potential 'cartesian explosion' here as using ProjectTo and not Includes:
-            // https://github.com/dotnet/efcore/issues/21234
-            // https://docs.microsoft.com/en-us/ef/core/querying/single-split-queries
             return await _repo.GetById(id)
                 .ProjectTo<TDto>(Mapper.ConfigurationProvider)
                 .SingleOrDefaultAsync();

@@ -40,11 +40,18 @@ namespace ExampleRepoApp.BusinessLogic.Services
             await _vehicleRepo.Add(entity);
         }
 
+        public async Task<ExtendedVehicle> GetExtendedVehicleById(long id)
+        {
+            return await _vehicleRepo.GetById(id)
+                .ProjectTo<ExtendedVehicle>(Mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
+
         public async Task<IEnumerable<Vehicle>> GetVehiclesByMake(string make)
         {
             return await _vehicleRepo.GetVehiclesByMake(make)
-                .ProjectTo<Vehicle>(Mapper.ConfigurationProvider)
-                .ToListAsync();
+            .ProjectTo<Vehicle>(Mapper.ConfigurationProvider)
+            .ToListAsync();
         }
 
         public async Task<IEnumerable<Vehicle>> GetVehiclesByModel(string model)

@@ -12,5 +12,10 @@ namespace ExampleRepoApp.DataLayer.Repositories
         {
             return Context.Owners.Where(x => x.EmailAddress == email);
         }
+
+        public override IQueryable<ExampleOwner> GetById(long id)
+        {
+            return Context.Owners.Where(x => x.Id == id);
+        }
     }
 }

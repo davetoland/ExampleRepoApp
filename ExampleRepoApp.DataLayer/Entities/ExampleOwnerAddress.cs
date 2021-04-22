@@ -10,6 +10,6 @@ namespace ExampleRepoApp.DataLayer.Entities
         public string County { get; set; }
         public string PostCode { get; set; }
         
-        public virtual IEnumerable<ExampleOwner> Owners { get; }
+        public virtual IEnumerable<ExampleOwner> Owners { get; set; }
     }
 }

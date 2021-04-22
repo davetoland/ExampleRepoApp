@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ExampleRepoApp.BusinessLogic.Models
 {
     public class CreateOwnerModel
     {
+        [Required]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }

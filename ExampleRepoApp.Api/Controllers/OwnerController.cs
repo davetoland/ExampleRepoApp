@@ -26,9 +26,12 @@ namespace ExampleRepoApp.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<IActionResult> GetOwnerById(long id)
+        public async Task<IActionResult> GetOwnerById(long id, bool extendedDetails)
         {
-            var owner = await _service.GetById(id);
+            var owner = extendedDetails
+            ? await _service.GetById(id)
+            : await _service.GetExtendedOwnerById(id);
+            
             if (owner != null)
                 return Ok(owner);
 

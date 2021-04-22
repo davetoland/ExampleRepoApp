@@ -5,6 +5,5 @@
         public string Make { get; set; }
         public string Model { get; set; }
         public string VehicleType { get; set; }
-        public Owner Owner { get; set; }
     }
 }

@@ -47,6 +47,13 @@ namespace ExampleRepoApp.BusinessLogic.Services
             entity.Address = addressEntity;
             await _ownerRepo.Add(entity);
         }
+        
+        public async Task<ExtendedOwner> GetExtendedOwnerById(long id)
+        {
+            return await _ownerRepo.GetById(id)
+                .ProjectTo<ExtendedOwner>(Mapper.ConfigurationProvider)
+                .SingleOrDefaultAsync();
+        }
 
         public async Task<Owner> GetOwnerByEmail(string email)
         {

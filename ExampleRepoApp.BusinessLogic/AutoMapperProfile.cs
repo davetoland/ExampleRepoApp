@@ -11,15 +11,18 @@ namespace ExampleRepoApp.BusinessLogic
             CreateMap<CreateOwnerModel, ExampleOwner>();
             CreateMap<CreateVehicleModel, ExampleVehicle>()
                 .ForMember(dest => dest.VehicleType, src => src.Ignore());
+
+            CreateMap<ExampleOwner, Domain.ExtendedOwner>()
+                ;//.ForAllMembers(src => src.ExplicitExpansion());
+            CreateMap<Domain.ExtendedOwner, ExampleOwner>();
             
-            CreateMap<ExampleOwner, Domain.Owner>();
-            CreateMap<Domain.Owner, ExampleOwner>();
-            
-            CreateMap<ExampleOwnerAddress, Domain.OwnerAddress>();
+            CreateMap<ExampleOwnerAddress, Domain.OwnerAddress>()
+                ;//.ForAllMembers(src => src.ExplicitExpansion());
             CreateMap<Domain.OwnerAddress, ExampleOwnerAddress>();
 
             CreateMap<ExampleVehicle, Domain.Vehicle>()
-                .ForMember(dest => dest.VehicleType, src => src.MapFrom(x => x.VehicleType.Name));
+                .ForMember(dest => dest.VehicleType, src => src.MapFrom(x => x.VehicleType.Name))
+                ;//.ForAllMembers(src => src.ExplicitExpansion());
             CreateMap<Domain.Vehicle, ExampleVehicle>(); 
         }
     }
