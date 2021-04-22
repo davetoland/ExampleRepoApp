@@ -29,8 +29,8 @@ namespace ExampleRepoApp.Api.Controllers
         public async Task<IActionResult> GetOwnerById(long id, bool extendedDetails)
         {
             var owner = extendedDetails
-            ? await _service.GetById(id)
-            : await _service.GetExtendedOwnerById(id);
+            ? await _service.GetExtendedOwnerById(id)
+            : await _service.GetById(id);
             
             if (owner != null)
                 return Ok(owner);

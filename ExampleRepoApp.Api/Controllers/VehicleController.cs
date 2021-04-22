@@ -29,8 +29,8 @@ namespace ExampleRepoApp.Api.Controllers
         public async Task<IActionResult> GetVehicleById(long id, bool extendedDetails)
         {
             var vehicle = extendedDetails
-                ? await _service.GetById(id)
-                : await _service.GetExtendedVehicleById(id);
+                ? await _service.GetExtendedVehicleById(id)
+                : await _service.GetById(id);
             
             if (vehicle != null)
                 return Ok(vehicle);
